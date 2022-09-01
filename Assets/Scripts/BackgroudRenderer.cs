@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(MeshRenderer))]
+
 public class BackgroudRenderer : MonoBehaviour
 {
     [SerializeField] private float _speed;
