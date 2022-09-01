@@ -6,17 +6,28 @@ public class SliderRenderer : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private Slider _slider;
+    [SerializeField] private Hero _hero;
 
     private Coroutine _setValue;
     private readonly float _percent = 100;
-
-    public void SetBaseValues(float maxValue)
+ 
+    public void Start()
     {
-        _slider.maxValue = maxValue / _percent;
+        _slider.maxValue = _hero.GetHealth / _percent;
         _slider.value = _slider.maxValue;
     }
 
-    public void DrawHealth(float health)
+    private void OnEnable()
+    {
+        _hero.HealthChanged += DrawHealth;
+    }
+
+    private void OnDisable()
+    {
+        _hero.HealthChanged -= DrawHealth;
+    }
+
+    private void DrawHealth(float health)
     {
         if (_setValue != null)
             StopCoroutine(_setValue);

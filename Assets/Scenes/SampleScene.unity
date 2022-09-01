@@ -365,7 +365,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 948749517, guid: d98c922a1a173bd4b9778ecfbaf0a9eb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d98c922a1a173bd4b9778ecfbaf0a9eb, type: 3}
 --- !u!1 &705507993
 GameObject:
@@ -943,6 +944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0.3
   _stepOffsetX: 1
+  _hero: {fileID: 948749516}
 --- !u!23 &1140299075
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1211,13 +1213,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 948749516}
         m_TargetAssemblyTypeName: Hero, Assembly-CSharp
-        m_MethodName: RemoveHealth
+        m_MethodName: TakeDamage
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: -10
+          m_FloatArgument: 10
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1344,7 +1346,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 948749516}
         m_TargetAssemblyTypeName: Hero, Assembly-CSharp
-        m_MethodName: AddHealth
+        m_MethodName: TakeHeal
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1595,6 +1597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0.2
   _slider: {fileID: 1901456850}
+  _hero: {fileID: 948749516}
 --- !u!114 &1901456853
 MonoBehaviour:
   m_ObjectHideFlags: 0

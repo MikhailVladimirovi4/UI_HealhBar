@@ -61,7 +61,6 @@
     <Compile Include="Assets\Scripts\Hero.cs" />
     <Compile Include="Assets\Scripts\AnimatorHeroController.cs" />
     <Compile Include="Assets\Scripts\SliderRenderer.cs" />
-    <Compile Include="Assets\Scripts\HeroState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
