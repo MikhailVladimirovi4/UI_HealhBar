@@ -1,11 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Animator))]
-
 public class HeroState : MonoBehaviour
 {
-    [SerializeField] private BackgroudRenderer _backgroudRenderer;
     [SerializeField] private  UnityEvent _reached;
     [SerializeField] private Hero _hero;
 
