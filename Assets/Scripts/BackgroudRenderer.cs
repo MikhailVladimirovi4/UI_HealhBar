@@ -37,6 +37,6 @@ public class BackgroudRenderer : MonoBehaviour
     private void StopAnimation(float number)
     {
         if (number <= 0)
-            _meshRenderer.enabled = false;
+            _speed = 0;
     }
 }
